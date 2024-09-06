@@ -18,10 +18,10 @@ const Airdrop = () => {
   }
 
   return (
-    <div className="flex items-center w-[50%] pt-10">
-      <br />
+    <div className="flex flex-col md:flex-row items-center w-[50%] pt-10">
       <br />
       <Input className="flex w-[200%] justify-around" id="amount" type="text" placeholder="Amount" />
+      <br />
       <Button onClick={requestAirdrop}>Request Airdrop</Button>
     </div>
   );

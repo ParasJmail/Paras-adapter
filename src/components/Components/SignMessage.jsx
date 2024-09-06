@@ -2,6 +2,8 @@ import { ed25519 } from "@noble/curves/ed25519";
 import { useWallet } from "@solana/wallet-adapter-react";
 import bs58 from "bs58";
 import React from "react";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 
 const SignMessage = () => {
     const { publicKey, signMessage } = useWallet();
@@ -28,9 +30,13 @@ const SignMessage = () => {
     };
 
   return (
-    <div>
-      <input id="message" type="text" placeholder="Message" />
-      <button onClick={onClick}>Sign Message</button>
+    <div className="flex flex-col items-center w-[100%]">
+      <Input className="w-[100%]" id="message" type="text" placeholder="Message" />
+      
+      <div className="pt-5">
+      <Button className="" onClick={onClick}>Sign Message</Button>
+
+      </div>
     </div>
   )
 }

@@ -32,14 +32,16 @@ export default function SendTokens() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       <div className="flex w-full">
       <Input id="to" type="text" placeholder="To" />
       <Input id="amount" type="text" placeholder="Amount" />
       </div>
       
       <br />
-      <Button className="flex" onClick={sendTokens}>Send</Button>
+      <div>
+      <Button className="flex w-fit text-center items-center" onClick={sendTokens}>Send</Button>
+      </div>
     </div>
   );
 }

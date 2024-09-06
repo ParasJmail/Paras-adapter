@@ -31,9 +31,13 @@ function App() {
     >
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <div className="bg-gray-500 h-screen p-20 w-full flex items-center justify-center flex-col">
-            <div className="flex justify-between align-middle items-center text-center w-full">
+          <div className="bg-gray-500 md:h-screen p-10 md:p-20 w-full flex items-center justify-center flex-col">
+            <div>
+              <h1 className="text-4xl py-10 text-white font-serif text-center">Paras Solana Adapter</h1>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between md:justify-between align-middle items-center text-center w-full">
               <WalletMultiButton />
+              <br />
               <WalletDisconnectButton />
             </div>
 
@@ -45,11 +49,11 @@ function App() {
               <ShowSolBalance  />
             </div>
 
-            <div>
+            <div className="w-full py-10 flex justify-center">
               <SendTokens />
             </div>
 
-            <div>
+            <div className="w-full py-10 flex justify-center">
               <SignMessage />
             </div>
             
