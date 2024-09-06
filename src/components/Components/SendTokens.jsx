@@ -32,9 +32,10 @@ export default function SendTokens() {
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex w-full">
-      <Input id="to" type="text" placeholder="To" />
+    <div className="flex flex-col items-center w-[100%] md:w-[50%]">
+      <div className="flex w-full flex-col md:flex-row ">
+      <Input className="w-[100%] md:w-[200%] " id="to" type="text" placeholder="To" />
+      <br />
       <Input id="amount" type="text" placeholder="Amount" />
       </div>
       
